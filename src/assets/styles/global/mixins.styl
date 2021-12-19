@@ -1,0 +1,90 @@
+screen = {
+  laptop: 1441px,
+  tablet: 1200px,
+  bookingTablet: 1023px,
+  mobile: 767px
+}
+
+mobile()
+  @media screen and (max-width screen.mobile)
+    {block}
+//
+tablet()
+  @media (min-width screen.mobile) and (max-width screen.tablet)
+    {block}
+tablet-max()
+  @media screen and (max-width screen.tablet)
+    {block}
+
+bMobile()
+  @media screen and (max-width screen.mobile)
+    {block}
+bTablet()
+  @media (min-width screen.mobile) and (max-width screen.bookingTablet)
+    {block}
+bTablet-max()
+  @media screen and (max-width screen.bookingTablet)
+    {block}
+//
+highResol()
+  @media (min-width screen.laptop)
+    {block}
+//
+desktop()
+  @media (min-width screen.tablet)
+    {block}
+
+bcgImage()
+  background-size: cover
+  background-position: top left
+  background-repeat: no-repeat
+
+bcgImageCenter()
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+absCenter()
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+abs()
+  position: absolute
+  top: 0
+  left: 0
+absTL(t,l)
+  position: absolute
+  top: t
+  left: l
+absTR(t,r)
+  position: absolute
+  top: t
+  right: r
+absBL(b,l)
+  position: absolute
+  bottom: b
+  left: l
+absBR(b,r)
+  position: absolute
+  bottom: b
+  rigth: r
+
+mw(width)
+  width: 100%
+  max-width: width
+
+container()
+  width: 100%
+  max-width: 1270px
+  padding: 0 50px
+  margin: 0 auto
+  +tablet()
+    width: 768px
+    max-width: none
+    padding: 0 20px
+  +mobile()
+    width: 100%
+    max-width: none
+    padding: 0 20px

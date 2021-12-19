@@ -1,7 +1,7 @@
 <template>
-  <div class="about">
+  <div class="contact">
     <div class="container">
-      <h1>This is an about page</h1>
+      <h1>Contact page</h1>
     </div>
   </div>
 </template>
