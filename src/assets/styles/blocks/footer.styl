@@ -1,22 +1,45 @@
-.footer
-  display: flex
-  align-items: center
-  width: 100%
-  height: 100px
-  padding: 0 100px
-  background-color: colorBcgPink
+.footer {
+  width: 100%;
+  height: 100px;
+  padding: 0 100px;
+  background-color: colorBcgPink;
 
-  &__nav
-    display: flex
-    align-items: center
-    justify-content: flex-end
+  &__container {
+    container();
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
 
-  &__nav-item
-    margin-right: 45px
-    border-bottom: 1px solid transparent
-    color: #000
-    transition: all .3s ease
-    &:last-child
-      margin-right: 0
-    &:hover
-      color: colorOrange
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__nav-item {
+    margin-right: 45px;
+    border-bottom: 1px solid transparent;
+    color: #000;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: colorOrange;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+  }
+
+  &__social-item {
+    padding-left: 20px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: colorOrange;
+    }
+  }
+}

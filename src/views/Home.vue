@@ -15,36 +15,11 @@
             (Indonesia), Colombia. I am an experienced and self-motivated web
             developer with ten years of industry experience.
           </p>
-          <div class="glyph fs1">
-            <div class="clearfix bshadow0 pbs">
-              <span class="icon icon-linkedin"></span>
-            </div>
-          </div>
-          <div class="home__skill-list">
-            <p class="home__skill-title">Skills</p>
+          <p class="home__skill-title">Skills</p>
+          <div class="home__skill-list" v-for="skill in skills" :key="skill.id">
             <div class="home__skill">
-              <span class="home__skill-name">Web Development</span>
-              <span class="home__skill-value">10 years</span>
-            </div>
-            <div class="home__skill">
-              <span class="home__skill-name">HTML/CSS</span>
-              <span class="home__skill-value">10 years</span>
-            </div>
-            <div class="home__skill">
-              <span class="home__skill-name">Javascript</span>
-              <span class="home__skill-value">5 years</span>
-            </div>
-            <div class="home__skill">
-              <span class="home__skill-name">Vue.js</span>
-              <span class="home__skill-value">5 years</span>
-            </div>
-            <div class="home__skill">
-              <span class="home__skill-name">Angular</span>
-              <span class="home__skill-value">2 years</span>
-            </div>
-            <div class="home__skill">
-              <span class="home__skill-name">Ionic</span>
-              <span class="home__skill-value">2 years</span>
+              <span class="home__skill-name">{{ skill.name }}</span>
+              <span class="home__skill-value">{{ skill.years }} years</span>
             </div>
           </div>
         </div>
@@ -52,3 +27,16 @@
     </div>
   </div>
 </template>
+
+<script>
+import skills from '@/data/skills.js'
+
+export default {
+  name: 'Home',
+  data() {
+    return {
+      skills: skills,
+    }
+  },
+}
+</script>
